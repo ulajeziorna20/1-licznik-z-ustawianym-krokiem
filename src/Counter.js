@@ -23,6 +23,19 @@ class Counter extends Component {
 
 
 
+    stepValueChange = (e) => {
+
+
+        this.setState({
+            stepValue: e.target.value
+        })
+    }
+
+
+
+
+
+
 
     buttonHandleChange = (action) => {
 
@@ -31,9 +44,14 @@ class Counter extends Component {
 
 
             let currentCounterValue = prevState.counterValue
+            let currentStepValue = prevState.stepValue
+            console.log(currentStepValue);
 
-            if (action === 'add-1') {
-                currentCounterValue += 1
+            let arr = currentCounterValue + currentStepValue
+            console.log(arr);
+
+            if (action === 'add-x') {
+                currentCounterValue += currentStepValue
     
             } else if (action === 'reset') {
                 currentCounterValue = 0
@@ -69,8 +87,9 @@ class Counter extends Component {
             <div>
 
             <Display valueToDisplay={this.state.counterValue}/>
-            <ButtonsPannel buttonMethod={this.buttonHandleChange}/>
-            <Step />
+            <ButtonsPannel buttonMethod={this.buttonHandleChange}
+            stateValueToDisplay={this.state.stepValue}/>
+            <Step stepMethod={this.stepValueChange}/>
                 
             </div>
         )

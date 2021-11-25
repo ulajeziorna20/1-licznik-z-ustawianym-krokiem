@@ -9,7 +9,7 @@ function ButtonsPannel(props) {
 
     return (
         <div>
-            <button className="add-1" onClick={() => props.buttonMethod('add-1')}>Add 1</button>
+            <button className="add-x" onClick={() => props.buttonMethod('add-x')}>Zwiększ o: <span>{props.stateValueToDisplay}</span></button>
             <button className="reset" onClick={() => props.buttonMethod('reset')}>Reset</button>
             <button className="reset" onClick={() => props.buttonMethod('reinit')}>Reinit</button>
         </div>

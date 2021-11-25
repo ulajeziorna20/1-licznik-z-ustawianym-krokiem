@@ -9,8 +9,8 @@ function Step(props) {
     return (
         <div>
             <form action="">
-                <label for="quantity">Krok: </label>
-                <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30" />
+                <label htmlFor="quantity">Krok: </label>
+                <input type="number" id="quantity" name="quantity" min="1" max="1000" onChange={props.stepMethod}/>
             </form>
 
         </div>
