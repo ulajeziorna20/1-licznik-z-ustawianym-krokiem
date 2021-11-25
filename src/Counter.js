@@ -3,7 +3,7 @@ import { Component } from "react";
 import ButtonsPannel from "./ButtonsPannel";
 import './Counter.css';
 import Display from "./Display";
-
+import Step from "./Step";
 
 
 class Counter extends Component {
@@ -16,7 +16,8 @@ class Counter extends Component {
 
         this.state = ({
 
-            counterValue: this.props.initValue
+            counterValue: this.props.initValue,
+            stepValue: 1
         })
     }
 
@@ -69,6 +70,7 @@ class Counter extends Component {
 
             <Display valueToDisplay={this.state.counterValue}/>
             <ButtonsPannel buttonMethod={this.buttonHandleChange}/>
+            <Step />
                 
             </div>
         )
