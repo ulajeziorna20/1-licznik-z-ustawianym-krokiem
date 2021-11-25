@@ -25,6 +25,9 @@ class Counter extends Component {
 
     stepValueChange = (e) => {
 
+        console.log(e.target.value);
+        console.log(+e.target.value);
+
 
         this.setState({
             stepValue: e.target.value
@@ -51,7 +54,7 @@ class Counter extends Component {
             console.log(arr);
 
             if (action === 'add-x') {
-                currentCounterValue += currentStepValue
+                currentCounterValue += (+currentStepValue)
     
             } else if (action === 'reset') {
                 currentCounterValue = 0
