@@ -55,12 +55,12 @@ class Counter extends Component {
 
             if (action === 'add-x') {
                 currentCounterValue += currentStepValue
-    
+
             } else if (action === 'reset') {
                 currentCounterValue = 0
             } else {
                 currentCounterValue = prevProps.initValue
-    
+
             }
 
 
@@ -68,38 +68,29 @@ class Counter extends Component {
             return ({
                 counterValue: currentCounterValue
             })
-    
+
         })
-          
+
     }
-
-
-
-
-
-
 
     render() {
 
 
 
-
-
-        
         return (
             <div>
 
-            <Display valueToDisplay={this.state.counterValue}/>
-            <ButtonsPannel buttonMethod={this.buttonHandleChange}
-            stateValueToDisplay={this.state.stepValue}/>
-            <Step stepMethod={this.stepValueChange}/>
-                
+                <Display valueToDisplay={this.state.counterValue} />
+                <ButtonsPannel buttonMethod={this.buttonHandleChange}
+                    stateValueToDisplay={this.state.stepValue} />
+                <Step stepMethod={this.stepValueChange} />
+
             </div>
         )
 
     }
 
-        
+
 
 
 }
