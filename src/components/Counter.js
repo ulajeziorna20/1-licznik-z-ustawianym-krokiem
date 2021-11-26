@@ -6,6 +6,7 @@ import Display from "./Display";
 import Step from "./Step";
 
 
+
 class Counter extends Component {
 
 
@@ -13,9 +14,7 @@ class Counter extends Component {
         super(props)
 
 
-
         this.state = ({
-
             counterValue: this.props.initValue,
             stepValue: 1
         })
@@ -24,10 +23,8 @@ class Counter extends Component {
 
 
     stepValueChange = (e) => {
-
         // console.log(e.target.value);
         // console.log(+e.target.value);
-
 
         this.setState({
             stepValue: +e.target.value
@@ -37,11 +34,7 @@ class Counter extends Component {
 
 
 
-
-
-
     buttonHandleChange = (action) => {
-
 
         this.setState((prevState, prevProps) => {
 
@@ -49,7 +42,6 @@ class Counter extends Component {
             let currentCounterValue = prevState.counterValue
             let currentStepValue = prevState.stepValue
             console.log(currentStepValue);
-
             let arr = currentCounterValue + currentStepValue
             console.log(arr);
 
@@ -64,38 +56,26 @@ class Counter extends Component {
             }
 
 
-
             return ({
                 counterValue: currentCounterValue
             })
-
         })
-
     }
+
+
 
     render() {
 
-
-
         return (
             <div>
-
                 <Display valueToDisplay={this.state.counterValue} />
                 <ButtonsPannel buttonMethod={this.buttonHandleChange}
                     stateValueToDisplay={this.state.stepValue} />
                 <Step stepMethod={this.stepValueChange} />
-
             </div>
         )
-
     }
-
-
-
-
 }
-
-
 
 
 export default Counter;

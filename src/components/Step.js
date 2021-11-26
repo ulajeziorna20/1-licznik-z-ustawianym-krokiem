@@ -5,7 +5,6 @@ import './Step.css'
 
 function Step(props) {
 
-
     return (
         <div>
             <form action="">
