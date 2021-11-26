@@ -8,7 +8,7 @@ function Display(props) {
 
     return (
         <div className="counter-display">
-            Counter: {props.valueToDisplay}
+            Counter: {props.counterValueToDisplay}
         </div>
     )
 }

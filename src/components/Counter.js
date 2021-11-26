@@ -68,9 +68,9 @@ class Counter extends Component {
 
         return (
             <div>
-                <Display valueToDisplay={this.state.counterValue} />
+                <Display counterValueToDisplay={this.state.counterValue} />
                 <ButtonsPannel buttonMethod={this.buttonHandleChange}
-                    stateValueToDisplay={this.state.stepValue} />
+                    stepToDisplay={this.state.stepValue} />
                 <Step stepMethod={this.stepValueChange} />
             </div>
         )
