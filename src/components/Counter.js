@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import ButtonsPannel from "./ButtonsPannel";
-import './Counter.css';
+import './css/Counter.css';
 import Display from "./Display";
 import Step from "./Step";
 

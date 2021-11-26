@@ -1,5 +1,5 @@
 import React from "react";
-import './ButtonsPanel.css'
+import './css/ButtonsPanel.css'
 
 
 
